@@ -57,10 +57,55 @@ class ExampleUnitTest {
         println("$str, \nexpected: $expected, \nactual: $actual")
         assertEquals("lengthOfLongestSubstring", expected, actual)
 
-        str =  "bbtablud"
+        str = "bbtablud"
         expected = SlideInfo(str, 2, 7)
         actual = slideOfString(str)
         println("$str, \nexpected: $expected, \nactual: $actual")
         assertEquals("lengthOfLongestSubstring", expected, actual)
+    }
+
+    @Test
+    fun maxProfitTest() {
+        run {
+            val prices = intArrayOf()
+            val expected = 0
+            val actual = maxProfit(prices)
+            assertEquals(expected, actual)
+        }
+
+        run {
+            val prices = intArrayOf(1)
+            val expected = 0
+            val actual = maxProfit(prices)
+            assertEquals(expected, actual)
+        }
+
+        run {
+            val prices = intArrayOf(1, 1)
+            val expected = 0
+            val actual = maxProfit(prices)
+            assertEquals(expected, actual)
+        }
+
+        run {
+            val prices = intArrayOf(7, 1, 5, 3, 6, 4)
+            val expected = 7
+            val actual = maxProfit(prices)
+            assertEquals(expected, actual)
+        }
+
+        run {
+            val prices = intArrayOf(1, 2, 3, 4, 5)
+            val expected = 4
+            val actual = maxProfit(prices)
+            assertEquals(expected, actual)
+        }
+
+        run {
+            val prices = intArrayOf(7, 6, 4, 3, 1)
+            val expected = 0
+            val actual = maxProfit(prices)
+            assertEquals(expected, actual)
+        }
     }
 }
