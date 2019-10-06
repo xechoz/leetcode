@@ -1,5 +1,7 @@
 package com.xechoz.app.leetcode
 
+import com.xechoz.app.leetcode.array.plusOne
+import org.junit.Assert.assertArrayEquals
 import org.junit.Assert.assertEquals
 import org.junit.Test
 
@@ -141,6 +143,17 @@ class ExampleUnitTest {
             val expected = intArrayOf(5,6,7,1,2,3,4)
             rotate(num, k)
             assertEquals(expected.joinToString(","), num.joinToString(","))
+        }
+    }
+
+    @Test
+    fun plusOneTest() {
+        run {
+            val input = intArrayOf(9)
+            val expect = intArrayOf(1, 0)
+            val result = plusOne(input)
+            println("${expect.joinToString(",")}, ${result.joinToString(",")}")
+            assertArrayEquals(result, expect)
         }
     }
 }
