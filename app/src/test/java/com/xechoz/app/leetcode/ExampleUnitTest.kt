@@ -108,4 +108,39 @@ class ExampleUnitTest {
             assertEquals(expected, actual)
         }
     }
+
+    @Test
+    fun rotateTest() {
+        run {
+            val num = intArrayOf(1,2,3,4,5,6,7)
+            val k = 3
+            val expected = intArrayOf(5,6,7,1,2,3,4)
+            rotate(num, k)
+            assertEquals(expected.joinToString(","), num.joinToString(","))
+        }
+
+        run {
+            val num = intArrayOf(1,2,3,4,5,6,7)
+            val k = 0
+            val expected = intArrayOf(1,2,3,4,5,6,7)
+            rotate(num, k)
+            assertEquals(expected.joinToString(","), num.joinToString(","))
+        }
+
+        run {
+            val num = intArrayOf(1,2,3,4,5,6,7)
+            val k = 7
+            val expected = intArrayOf(1,2,3,4,5,6,7)
+            rotate(num, k)
+            assertEquals(expected.joinToString(","), num.joinToString(","))
+        }
+
+        run {
+            val num = intArrayOf(1,2,3,4,5,6,7)
+            val k = 10
+            val expected = intArrayOf(5,6,7,1,2,3,4)
+            rotate(num, k)
+            assertEquals(expected.joinToString(","), num.joinToString(","))
+        }
+    }
 }
